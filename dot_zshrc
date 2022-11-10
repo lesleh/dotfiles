@@ -1,8 +1,15 @@
 eval $(/opt/homebrew/bin/brew shellenv)
 
-source $HOME/antigen/antigen.zsh
-source $HOME/.zaliases
-source $HOME/.zfunctions
+# source script if exists
+if [ -f $HOME/antigen/antigen.zsh ]; then
+  source $HOME/antigen/antigen.zsh
+fi
+if [ -f $HOME/.zaliases ]; then
+  source $HOME/.zaliases
+fi
+if [ -f $HOME/.zfunctions ]; then
+  source $HOME/.zfunctions
+fi
 
 antigen use oh-my-zsh
 antigen bundle git
