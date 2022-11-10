@@ -1,6 +1,8 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias proxy-off='networksetup -setsocksfirewallproxystate "Wi-Fi" off'
   alias proxy-on='networksetup -setsocksfirewallproxystate "Wi-Fi" on'
+
+  alias c="tr -d '\n' | pbcopy"
 fi
 
 alias be='bundle exec'
