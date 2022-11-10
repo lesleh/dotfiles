@@ -3,9 +3,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   alias proxy-on='networksetup -setsocksfirewallproxystate "Wi-Fi" on'
 
   alias c="tr -d '\n' | pbcopy"
-
-  # Lock the screen
-  alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend" 
 fi
 
 alias be='bundle exec'
