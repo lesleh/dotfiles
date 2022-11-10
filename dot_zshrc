@@ -1,22 +1,17 @@
 eval $(/opt/homebrew/bin/brew shellenv)
 
-# source script if exists
+if [ -f $HOME/.zaliases ]; then source $HOME/.zaliases; fi
+if [ -f $HOME/.zfunctions ]; then source $HOME/.zfunctions; fi
+
 if [ -f $HOME/antigen/antigen.zsh ]; then
   source $HOME/antigen/antigen.zsh
+  antigen use oh-my-zsh
+  antigen bundle git
+  antigen bundle ruby
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen theme robbyrussell
+  antigen apply
 fi
-if [ -f $HOME/.zaliases ]; then
-  source $HOME/.zaliases
-fi
-if [ -f $HOME/.zfunctions ]; then
-  source $HOME/.zfunctions
-fi
-
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle ruby
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen theme robbyrussell
-antigen apply
 
 export PATH=$HOME/bin:$PATH
 export PROJECTS_HOME=${HOME}/simplybusiness
