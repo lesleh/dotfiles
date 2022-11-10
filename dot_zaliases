@@ -1,5 +1,8 @@
-alias proxy-off='networksetup -setsocksfirewallproxystate "Wi-Fi" off'
-alias proxy-on='networksetup -setsocksfirewallproxystate "Wi-Fi" on'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias proxy-off='networksetup -setsocksfirewallproxystate "Wi-Fi" off'
+  alias proxy-on='networksetup -setsocksfirewallproxystate "Wi-Fi" on'
+fi
+
 alias be='bundle exec'
 alias yw='yarn workspace'
 alias yt='yarn test'
