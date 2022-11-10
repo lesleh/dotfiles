@@ -1,0 +1,7 @@
+alias proxy-off='networksetup -setsocksfirewallproxystate "Wi-Fi" off'
+alias proxy-on='networksetup -setsocksfirewallproxystate "Wi-Fi" on'
+alias be='bundle exec'
+alias yw='yarn workspace'
+alias yt='yarn test'
+alias ytw='yarn test --watch'
+alias gcne='git commit --no-edit'
