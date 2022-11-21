@@ -8,6 +8,7 @@ if [ -f $HOME/antigen/antigen.zsh ]; then
   antigen use oh-my-zsh
   antigen bundle git
   antigen bundle ruby
+  antigen bundle asdf
   antigen bundle zsh-users/zsh-syntax-highlighting
   antigen theme robbyrussell
   antigen apply
